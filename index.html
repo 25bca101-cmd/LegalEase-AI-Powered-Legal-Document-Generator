@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LegalEase – AI Legal Document Generator</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <div class="brand">⚖️ LegalEase</div>
+  <div class="tag">AI-Powered Legal Document Generator</div>
+</header>
+
+<main>
+<section class="hero">
+  <h1>Create Legal Documents Faster</h1>
+  <p>Enter the basic details, generate a structured document, edit it, and print/save it as PDF.</p>
+</section>
+
+<section class="card">
+  <h2>Document Details</h2>
+  <label>Document Type</label>
+  <select id="documentType">
+    <option>Employment Contract</option>
+    <option>Non-Disclosure Agreement (NDA)</option>
+    <option>Lease Agreement</option>
+    <option>Freelance Work Contract</option>
+    <option>Service Agreement</option>
+  </select>
+
+  <label>Parties Involved</label>
+  <textarea id="parties" placeholder="Example: Jane Doe (Service Provider), TechNova Inc. (Client)"></textarea>
+
+  <label>Terms & Conditions</label>
+  <textarea id="terms" placeholder="Separate terms using semicolons. Example: Payment within 30 days; Confidentiality must be maintained; Either party may terminate with 15 days notice"></textarea>
+
+  <label>Effective Date</label>
+  <input type="date" id="date">
+
+  <button onclick="generateDocument()">✨ Generate Document</button>
+  <button class="secondary" onclick="clearAll()">Clear</button>
+</section>
+
+<section class="card">
+  <div class="previewHead">
+    <h2>Document Preview</h2>
+    <span id="status">Ready</span>
+  </div>
+  <textarea id="output" class="output" placeholder="Generated document will appear here. You can edit it before printing."></textarea>
+  <div class="actions">
+    <button onclick="downloadTXT()">Download TXT</button>
+    <button onclick="printDocument()">Print / Save PDF</button>
+    <button onclick="copyDocument()">Copy</button>
+  </div>
+  <p class="notice">Demo note: This student project generates structured draft content from templates. It is not a substitute for professional legal advice.</p>
+</section>
+</main>
+
+<footer>LegalEase • Naan Mudhalvan Student Project • AI-assisted document drafting prototype</footer>
+<script src="script.js"></script>
+</body>
+</html>
